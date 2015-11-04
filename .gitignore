@@ -1,0 +1,6 @@
+DS_Store
+DS_Store?
+app1/node_modules
+app2/node_modules
+terraform/terraform.tfvars
+npm-debug.log

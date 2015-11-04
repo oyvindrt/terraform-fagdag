@@ -1,0 +1,28 @@
+[
+	{
+		"name": "app1",
+		"image": "oyvindrt/app1",
+		"essential": true,
+		"memory": 400,
+		"cpu": 400,
+		"portMappings": [
+			{
+				"containerPort": 3000,
+				"hostPort": 3000
+			}
+		]
+	},
+	{
+		"name": "app2",
+		"image": "oyvindrt/app2",
+		"essential": true,
+		"memory": 400,
+		"cpu": 400,
+		"portMappings": [
+			{
+				"containerPort": 5000,
+				"hostPort": 5000
+			}
+		]
+	}
+]
