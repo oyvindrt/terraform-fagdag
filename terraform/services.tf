@@ -7,7 +7,7 @@ resource "aws_ecs_service" "my_service" {
 
   load_balancer {
     elb_name = "${aws_elb.my_app1_load_balancer.id}"
-    container_name = "my_backend"
+    container_name = "app1"
     container_port = "3000"
   }
 }
