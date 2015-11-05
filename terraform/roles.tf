@@ -1,3 +1,5 @@
+# Service Role
+
 resource "aws_iam_role_policy" "ecs_service_policy" {
     name = "service_policy"
     role = "${aws_iam_role.ecs_service_role.id}"
@@ -41,6 +43,8 @@ resource "aws_iam_role" "ecs_service_role" {
 }
 EOF
 }
+
+#Instance Role
 
 resource "aws_iam_role_policy" "ecs_instance_policy" {
     name = "instance_policy"

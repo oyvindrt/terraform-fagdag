@@ -7,7 +7,7 @@ resource "aws_elb" "my_app2_load_balancer" {
 	listener {
 		instance_port = 5000
 	    instance_protocol = "http"
-	    lb_port = 5000
+	    lb_port = 80
 	    lb_protocol = "http"
 	}
 		
@@ -34,7 +34,7 @@ resource "aws_elb" "my_app1_load_balancer" {
 	listener {
 		instance_port = 3000
 	    instance_protocol = "http"
-	    lb_port = 3000
+	    lb_port = 80
 	    lb_protocol = "http"
 	}
 		

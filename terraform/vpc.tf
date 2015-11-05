@@ -39,6 +39,7 @@ resource "aws_main_route_table_association" "my_main_route_table_association" {
 resource "aws_security_group" "my_security_group" {
     name        = "my_security_group"
     vpc_id      = "${aws_vpc.my_vpc.id}"
+
     ingress {
         from_port = "80"
         to_port   = "80"
@@ -47,6 +48,25 @@ resource "aws_security_group" "my_security_group" {
             "0.0.0.0/0"
         ]
     }
+
+    ingress {
+        from_port = "3000"
+        to_port   = "3000"
+        protocol  = "tcp"
+        cidr_blocks = [
+            "0.0.0.0/0"
+        ]
+    }
+
+    ingress {
+        from_port = "5000"
+        to_port   = "5000"
+        protocol  = "tcp"
+        cidr_blocks = [
+            "0.0.0.0/0"
+        ]
+    }
+
     egress {
         from_port = "0"
         to_port   = "0"
